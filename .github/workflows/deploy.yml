@@ -21,4 +21,5 @@ jobs:
       - name: Copy index file to server
         run: |
           scp -o StrictHostKeyChecking=no index.html ${{ secrets.SSH_USER_SERVER }}:/var/www/szabi.blog/public/
+          &&
           ssh ${{ secrets.SSH_USER_SERVER }} bash -c "chown www-data:www-data /var/www/szabi.blog/public/index.html"
