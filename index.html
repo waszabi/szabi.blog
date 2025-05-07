@@ -98,13 +98,18 @@ function convertAllTextNodes() {
   let node;
 
   while (node = walker.nextNode()) {
-   const parent = node.parentNode;
-   const newHtml = convertUrlsToLinks(node.nodeValue);
-   if (newHtml !== node.nodeValue) {
-     const newNode = document.createElement('span');
-     newNode.innerHTML = newHtml;
-     parent.replaceChild(newNode, node);
-   }
+    const parent = node.parentNode;
+    const newHtml = convertUrlsToLinks(node.nodeValue);
+    if (newHtml !== node.nodeValue) {
+      const tempDiv = document.createElement('div');
+      tempDiv.innerHTML = newHtml;
+
+      // Insert each child of tempDiv before the original node
+      while (tempDiv.firstChild) {
+        parent.insertBefore(tempDiv.firstChild, node);
+      }
+      parent.removeChild(node);
+    }
   }
 }
 
