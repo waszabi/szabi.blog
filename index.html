@@ -69,5 +69,29 @@
 
 </div>
 
+<script>
+function convertUrlsToLinks(text) {
+  const urlPattern = /(https?:\/\/[^\s]+)/g;
+  return text.replace(urlPattern, '<a href="$1" target="_blank">$1</a>');
+}
+
+function convertAllTextNodes() {
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+  let node;
+
+  while (node = walker.nextNode()) {
+   const parent = node.parentNode;
+   const newHtml = convertUrlsToLinks(node.nodeValue);
+   if (newHtml !== node.nodeValue) {
+     const newNode = document.createElement('span');
+     newNode.innerHTML = newHtml;
+     parent.replaceChild(newNode, node);
+   }
+  }
+}
+
+window.onload = convertAllTextNodes;
+</script>
+  
 </body>
 </html>
