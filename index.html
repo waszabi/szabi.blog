@@ -71,7 +71,8 @@
 
 <script>
 function convertUrlsToLinks(text) {
-  const urlPattern = /(https?:\/\/[^\s]+)/g;
+  // Regular expression to match HTTP and HTTPS URLs, excluding trailing punctuation
+  const urlPattern = /(https?:\/\/[^\s.]+)([.,;!?]?)\s*/g;
   return text.replace(urlPattern, '<a href="$1" target="_blank">$1</a>');
 }
 
