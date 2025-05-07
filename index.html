@@ -94,7 +94,7 @@ function convertUrlsToLinks(text) {
 }
 
 function convertAllTextNodes() {
-  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, true);
   let node;
 
   while (node = walker.nextNode()) {
