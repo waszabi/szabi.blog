@@ -104,10 +104,14 @@ function convertAllTextNodes() {
       const tempDiv = document.createElement('div');
       tempDiv.innerHTML = newHtml;
 
-      // Insert each child of tempDiv before the original node
+      // Create a document fragment to hold the new nodes
+      const fragment = document.createDocumentFragment();
       while (tempDiv.firstChild) {
-        parent.insertBefore(tempDiv.firstChild, node);
+        fragment.appendChild(tempDiv.firstChild);
       }
+
+      // Insert the fragment before the original node and remove the original node
+      parent.insertBefore(fragment, node);
       parent.removeChild(node);
     }
   }
