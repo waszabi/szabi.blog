@@ -71,9 +71,13 @@
 
 <script>
 function convertUrlsToLinks(text) {
-  // Regular expression to match HTTP and HTTPS URLs, excluding trailing punctuation
-  const urlPattern = /(https?:\/\/[^\s.]+)([.,;!?]?)\s*/g;
-  return text.replace(urlPattern, '<a href="$1" target="_blank">$1</a>');
+  const urlPattern = /(https?:\/\/[^\s]+)/g;
+  return text.replace(urlPattern, (url) => {
+    // Check if the URL ends with a punctuation mark
+    const punctuation = /[.,;!?]$/.test(url) ? url.slice(-1) : '';
+    const cleanUrl = punctuation ? url.slice(0, -1) : url; // Remove the punctuation if it exists
+    return `<a href="${cleanUrl}" target="_blank">${cleanUrl}</a>${punctuation}`; // Append punctuation back
+  });
 }
 
 function convertAllTextNodes() {
