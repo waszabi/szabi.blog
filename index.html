@@ -56,6 +56,9 @@
       font-style: normal;
     }
   </style>
+
+  <script src="https://cdn.jsdelivr.net/npm/linkifyjs@3.0.0/dist/linkify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/linkifyjs@3.0.0/dist/linkify-html.min.js"></script>
 </head>
 <body class="ibm-plex-serif-regular">
 
@@ -83,41 +86,8 @@
 </div>
 
 <script>
-function convertUrlsToLinks(text) {
-  const urlPattern = /(https?:\/\/[^\s]+)/g;
-  return text.replace(urlPattern, (url) => {
-    // Check if the URL ends with a punctuation mark
-    const punctuation = /[.,;!?]$/.test(url) ? url.slice(-1) : '';
-    const cleanUrl = punctuation ? url.slice(0, -1) : url; // Remove the punctuation if it exists
-    return `<a href="${cleanUrl}" target="_blank">${cleanUrl}</a>${punctuation}`; // Append punctuation back
-  });
-}
-
-function convertAllTextNodes() {
-  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, true);
-  let node;
-
-  while (node = walker.nextNode()) {
-    const parent = node.parentNode;
-    const newHtml = convertUrlsToLinks(node.nodeValue);
-    if (newHtml !== node.nodeValue) {
-      const tempDiv = document.createElement('div');
-      tempDiv.innerHTML = newHtml;
-
-      // Create a document fragment to hold the new nodes
-      const fragment = document.createDocumentFragment();
-      while (tempDiv.firstChild) {
-        fragment.appendChild(tempDiv.firstChild);
-      }
-
-      // Insert the fragment before the original node and remove the original node
-      parent.insertBefore(fragment, node);
-      parent.removeChild(node);
-    }
-  }
-}
-
-window.onload = convertAllTextNodes;
+  const contentWrapper = document.querySelector('.content-wrapper');
+  contentWrapper.innerHTML = linkifyHtml(contentWrapper.innerHTML);
 </script>
   
 </body>
