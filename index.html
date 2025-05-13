@@ -26,13 +26,41 @@
       }
     }
 
-    .content {
-      p {
-        line-height: 1.25;
-        white-space: pre-wrap;
+    ol {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin: 0;
+        padding: 0;
       }
-      p::first-line {
-        font-weight: 500;
+
+      &.numbered {
+        counter-reset: numbered-list 1;
+        position: relative;
+
+        li {
+          margin-bottom: 30px;
+          padding-left: 30px;
+
+          line-height: 1.5;
+          white-space: pre-wrap;
+
+          &:before {
+            content: counter(numbered-list, decimal) ". ";
+            counter-increment: numbered-list -1;
+            display: block;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            left: 0;
+          }
+
+          &::first-line {
+            font-weight: 500;
+          }
+        }
       }
     }
   </style>
@@ -78,89 +106,91 @@
     <div class="pure-g">
       <div class="pure-u-1">
 
-<p>2025APR26
+<ol class="numbered">
+<li>2025APR26
 The project Empty Enter Expander is posted at https://news.ycombinator.com/item?id=43800574.
 The title is 'Show HN: Empty Enter Expander – Type less in the terminal with this tool'.
-</p>
-<p>2024DEC31
+</li>
+<li>2024DEC31
 Quote at https://www.instagram.com/p/DEPwCd5IrqL/.
 Saved time is worth more than saved gold.
 SK: Ušetrený čas má väčšiu hodnotu ako ušetrené zlato.
-</p>
-<p>2024NOV10
+</li>
+<li>2024NOV10
 Quote at https://www.instagram.com/p/DCMsDUTNjYZ/.
 When it looks like nothing in life is working, listen to your heart beating for you.
 SK: Keď to vyzerá, že v živote nič nefunguje, počúvaj, ako tvoje srdce bije pre teba.
-</p>
-<p>2024SEP30
+</li>
+<li>2024SEP30
 Quote at https://www.instagram.com/p/DAjDKjgNLWE/.
 A star continues to shine without knowing how many eyes have looked at it. Let the miracle of life shine in you the same way.
 SK: Hviezda žiari ďalej bez toho, aby vedela, koľko očí sa na ňu pozrelo. Umožni zázraku života, aby rovnako žiaril aj v tebe.
-</p>
-<p>2024SEP16
+</li>
+<li>2024SEP16
 The code for Empty Enter Expander is public at https://github.com/waszabi/empty-enter-expander.
 It inserts a command into the prompt with a few keystrokes.
-</p>
-<p>2024SEP08
+</li>
+<li>2024SEP08
 Quote at https://www.instagram.com/p/C_pmu15NQ_f/.
 Decision is a parent that takes care of the words.
 SK: Rozhodnutie je rodič, ktorý sa postará o slová.
-</p>
-<p>2024SEP01
+</li>
+<li>2024SEP01
 Quote at https://www.instagram.com/p/C_YSKibt8m9/.
 Many things will become useless after you begin to measure your wealth by happiness.
 SK: Mnohé veci sa stanú zbytočnými, keď začneš svoje bohatstvo merať šťastím.
-</p>
-<p>2024AUG08
+</li>
+<li>2024AUG08
 Quote at https://www.instagram.com/p/C-azmsMMHv9/.
 A book takes you as far as the chapters go. It is up to you to go further.
 SK: Kniha ťa zavedie tak ďaleko, ako idú kapitoly. Záleží len na tebe, či pôjdeš ďaľej.
-</p>
-<p>2024JUL14
+</li>
+<li>2024JUL14
 Quote at https://www.instagram.com/p/C9Z5L_gMPQN/.
 It is easy to replace you if you do what most people do.
 SK: Ak robíš to, čo väčšina, je ľahké ťa nahradiť.
-</p>
-<p>2024JUN19
+</li>
+<li>2024JUN19
 Quote at https://www.instagram.com/p/C8aHfHrMhBv/.
 An unpublished book says less than a fish talking about a desert.
 SK: Nevydaná kniha toho povie menej ako ryba, ktorá rozpráva o púšti.
-</p>
-<p>2024JUN06
+</li>
+<li>2024JUN06
 Quote at https://www.instagram.com/p/C74FevAt-q5/.
 The written word has the strength of a river moving rocks through the valley.
 SK: Písané slovo má silu rieky, ktorá hýbe kameňmi v údolí.
-</p>
-<p>2024MAY30
+</li>
+<li>2024MAY30
 Quote at https://www.instagram.com/p/C7lVT6lsXnJ/.
 A notebook and pencil in your pocket are companions that help to keep your mind clear.
 SK: Zápisník a ceruzka vo vrecku sú spoločníci, ktorí ti pomôžu udržať si čistú myseľ.
-</p>
-<p>2024MAY27
+</li>
+<li>2024MAY27
 Quote at https://www.instagram.com/p/C7e1AMjMeUV/.
 You miss the joy of life when you worry about money.
 SK: Keď sa obávaš kvôli peniazom, prichádzaš o radosť zo života.
-</p>
-<p>2024MAY25
+</li>
+<li>2024MAY25
 Quote at https://www.instagram.com/p/C7Yb4DBMxr0/.
 The lives of the elderly and lonely are made a thousand times harder when it comes to emergencies.
 SK: Životy starších a osamelých ľudí sú tisíckrát ťažšie, keď ide o núdzové situácie.
-</p>
-<p>2024MAY22
+</li>
+<li>2024MAY22
 Quote at https://www.instagram.com/p/C7RgM-ZNLTT/.
 Learn to live with imperfection and perfection will come to you.
 SK: Nauč sa žiť s nedokonalosťou a dokonalosť príde k tebe.
-</p>
-<p>2024MAY19
+</li>
+<li>2024MAY19
 Quote at https://www.instagram.com/p/C7Js54qsDFW/.
 Things can be bought with money that can be earned, but life cannot be given back.
 SK: Veci sa dajú kúpiť za peniaze, ktoré sa dajú zarobiť, ale život sa nedá vrátiť.
-</p>
-<p>2024MAY15
+</li>
+<li>2024MAY15
 Quote at https://www.instagram.com/p/C6_HR-jMo-J/.
 Writing a message on a piece of paper makes the paper more valuable. It depends only on you how much value you put on it. Because when you write something on paper, it can be worth nothing or it can be worth millions.
 SK: Napísanie správy na kus papiera zvyšuje hodnotu papiera. Záleží len na tebe, akú hodnotu na neho dáš. Pretože ak napíšeš dačo na papier, môže to mať nulovú hodnotu alebo hodnotu miliónov.
-</p>
+</li>
+</ol>
 
         
       </div>
@@ -172,6 +202,12 @@ SK: Napísanie správy na kus papiera zvyšuje hodnotu papiera. Záleží len na
 <script>
   const contentWrapper = document.querySelector('.content-wrapper');
   contentWrapper.innerHTML = linkifyHtml(contentWrapper.innerHTML);
+</script>
+
+<script>
+  const list = document.querySelector('.numbered');
+  const items = list.getElementsByTagName('li');
+  list.style.counterReset = 'numbered-list ' + (items.length + 1);
 </script>
   
 </body>
