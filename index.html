@@ -41,8 +41,7 @@
         position: relative;
 
         li {
-          margin-bottom: 30px;
-          padding-left: 30px;
+          margin-bottom: 1em;
 
           line-height: 1.5;
           white-space: pre-wrap;
@@ -50,11 +49,7 @@
           &:before {
             content: counter(numbered-list, decimal) ". ";
             counter-increment: numbered-list -1;
-            display: block;
-            width: 30px;
-            height: 30px;
-            position: absolute;
-            left: 0;
+            display: inline;
           }
 
           &::first-line {
