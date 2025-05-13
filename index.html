@@ -195,8 +195,29 @@ SK: Napísanie správy na kus papiera zvyšuje hodnotu papiera. Záleží len na
 </div>
 
 <script>
+  function customFormat(url) {
+    const urlObj = new URL(url);
+    const domain = urlObj.hostname;
+
+    const domainMap = {
+      'github.com': 'GitHub',
+      'instagram.com': 'Instagram',
+      'news.ycombinator.com': 'HackerNews'
+    };
+
+    for (const key in domainMap) {
+      if (domain.includes(key)) {
+        return domainMap[key];
+      }
+    }
+
+    return url;
+  }
+
   const contentWrapper = document.querySelector('.content-wrapper');
-  contentWrapper.innerHTML = linkifyHtml(contentWrapper.innerHTML);
+  contentWrapper.innerHTML = linkifyHtml(contentWrapper.innerHTML, {
+    format: customFormat,
+  });
 </script>
 
 <script>
