@@ -1,3 +1,11 @@
+/*
+<script src="write-here.js"></script>
+<write-here>
+<h2>Example</h2>
+<p>Content</p>
+</write-here>
+*/
+
 class WriteHere extends HTMLElement {
   constructor() {
     super();
