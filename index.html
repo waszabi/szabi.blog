@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Collection of musings by Szabi Garai">
-  
+
   <title>szabi.blog</title>
-  
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css">
-  
+
   <style>
     body {
       padding: .5em;
@@ -59,7 +59,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300;400;500&display=swap" rel="stylesheet">
-  
+
   <style>
     .ibm-plex-serif-light {
       font-family: "IBM Plex Serif", serif;
@@ -88,7 +88,7 @@
 <div class="header">
   <h1>
     <a href="/" title="szabi.blog" class="title"><span class="ibm-plex-serif-medium">szabi.</span><span class="ibm-plex-serif-light">blog</span></a>
-  </h1> 
+  </h1>
 </div>
 
 <div class="content-wrapper">
@@ -150,7 +150,7 @@ https://www.instagram.com/p/C7Js54qsDFW/ (2024, May 19)
 https://www.instagram.com/p/C6_HR-jMo-J/ (2024, May 15)
 </li>
 </ol>
-        
+
       </div>
     </div>
   </div>
@@ -178,9 +178,11 @@ https://www.instagram.com/p/C6_HR-jMo-J/ (2024, May 15)
     return url;
   }
 
-  const contentWrapper = document.querySelector('.content-wrapper');
-  contentWrapper.innerHTML = linkifyHtml(contentWrapper.innerHTML, {
-    format: customFormat,
+  window.addEventListener('load', function() {
+    const contentWrapper = document.querySelector(".content-wrapper");
+    contentWrapper.innerHTML = linkifyHtml(contentWrapper.innerHTML, {
+        format: customFormat,
+    });
   });
 </script>
 
@@ -189,6 +191,6 @@ https://www.instagram.com/p/C6_HR-jMo-J/ (2024, May 15)
   const items = list.getElementsByTagName('li');
   list.style.counterReset = 'numbered-list ' + (items.length + 1);
 </script>
-  
+
 </body>
 </html>
