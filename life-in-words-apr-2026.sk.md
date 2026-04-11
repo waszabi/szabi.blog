@@ -1,0 +1,29 @@
+<script src="write-here.js"></script>
+<write-here>
+    <article>
+        <header>
+            <h2>Zivot v slovach, Apr 2026</h2>
+            <p>Zverejnene dna <time datetime="2026-04-11">Apr 11, 2026</time></p>
+        </header>
+
+        <section>
+            <p>Zacnime od momentu, v ktorom sa firma rozhodla ukoncit nasu vzajomnu spolupracu po vyse piatich rokoch. Ked padli slova, rozhodol som sa s tym nebojovat. Odchadzam v pokoji. Snaha potlacat to nefunguje a preto nechavam plynut myslienky aj emocie bez odporu. Do ruk sa mi dostala zivotna situacia, ktoru potrebujem vyriesit.</p>
+
+            <p>Stojim na rozcesti, ci si vobec davat namahu hladat volnu poziciu, alebo si budovat daco vlastne. Spomenul som si na pana, ktory mi zvykaval telefonovat s ponukami a vzdy som ho odmietol s tym, ze som spokojny. Nepytal som sa ho priamo na pracu, ale na situaciu na trhu v oblasti programatorov. Nevyzera to dobre, je to momentalne skor o stasti.</p>
+
+            <p>Mat vlastnu firmu by vyzadovalo starat sa o predaj a o zakaznikov, najst produkt alebo sluzbu o ktory by bol zaujem. Ostat pri programovani by znamenalo vybrat si medzi troma typmi spolocnosti.</p>
+
+            <p>Studia su jednoducho povedane riadene ludmi, ktori fakturuju za prace na internetovych strankach svojich klientov dvojnasobok toho, co si pyta ich progarmator. Dalej su spolocnosti, ktore maju zmluvy s vacsimi spolocnostami a funguju v podstate ako prostrednik medzi gigantom a programatorom. Tretim typom su take, ktore maju svoj vlastny produkt a kedze som pre take pracoval, hladal by som tym smerom. Korporaty neboli zvazovane.</p>
+
+            <p>Zavolal som aj programatorovi, s ktorym sa poznam uz dlhe roky a aj ked on svoje miesto este ma, zvazuje nad tym preklopit sa z digitalneho do fyzickeho sektora. Vraj uz taky vodar ci stolar zaraba rovnako, ak nie viac. Pozicia programator mizne.</p>
+
+            <p>Kedysi sa polia obrabali rucne, kym prisli stroje a nahradili pracu ludi. Nadefinovali vsak nove pracovne pozicie. Ostali ludia, ktori sa o tie stroje museli starat. Produkovalo sa viac a niekto sa tolkej urode musel venovat. Zakladom bolo prisposobit sa. A toto sa deje momentalne v programovani. Pracoval som na poli, ktore je uz minulostou a ci budem pracovat na inom, alebo na svojom, musim k tomu pristupovat uz inak.</p>
+
+            <p>Mat vlastnu firmu v kombinacii s pracou pre niekoho ineho je narocne, ale momentalne to vyzera ako jedina moznost. Predpokladam, ze taky rok by sa to dalo vydrzat, ale treba pocitat s tym, ze to bude mat vplyv aj na rodinu a okolie. Keby som to neskusil teraz, mozem lahko spadnut naspat, kde som bol a zivot by mi to neskor pripomenul znova. Treba zvolit a vyskusat cestu, ktorou bude clovek v buducnosti rad, ze isiel a nebude si vycitavat, ze mohol a vykrocil inak.</p>
+        </section>
+
+        <footer>
+            <address>Szabi Garai</address>
+        </footer>
+    </article>
+</write-here>
